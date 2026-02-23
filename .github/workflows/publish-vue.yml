@@ -1,0 +1,33 @@
+name: Publish Vue Package
+
+on:
+  push:
+    tags:
+      - '@zenon-red/alien-avatars-vue@*'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  id-token: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    environment: npm
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v2
+
+      - name: Install dependencies
+        run: bun install --frozen-lockfile
+
+      - name: Build package
+        run: bun run --filter @zenon-red/alien-avatars-vue build
+
+      - name: Publish to NPM
+        run: |
+          cd packages/vue
+          npx npm@latest publish --provenance --access public
