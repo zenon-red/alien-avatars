@@ -1,0 +1,42 @@
+{
+  "name": "@zenon-red/alien-avatars-react",
+  "type": "module",
+  "version": "1.0.1",
+  "description": "Deterministic SVG alien avatars for React.",
+  "license": "MIT",
+  "homepage": "https://zenon.red",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zenon-red/alien-avatars.git",
+    "directory": "packages/react"
+  },
+  "bugs": {
+    "url": "https://github.com/zenon-red/alien-avatars/issues"
+  },
+  "keywords": ["avatar", "svg", "react", "alien", "generator", "profile-picture", "deterministic", "zenon"],
+  "sideEffects": false,
+  "publishConfig": {
+    "access": "public"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "files": ["dist"],
+  "scripts": {
+    "build": "tsdown",
+    "dev": "tsdown --watch"
+  },
+  "peerDependencies": {
+    "react": ">=19.0.0"
+  },
+  "devDependencies": {
+    "@types/react": "^19.2.14",
+    "react": "^19.2.4",
+    "tsdown": "^0.20.3",
+    "typescript": "^5.9.3"
+  }
+}
