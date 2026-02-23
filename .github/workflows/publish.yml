@@ -1,0 +1,54 @@
+name: Publish to NPM
+
+on:
+  push:
+    tags:
+      - '@zenon-red/alien-avatars-react@*'
+      - '@zenon-red/alien-avatars-vue@*'
+
+permissions:
+  contents: read
+  id-token: write
+
+jobs:
+  publish-react:
+    runs-on: ubuntu-latest
+    if: startsWith(github.ref, 'refs/tags/@zenon-red/alien-avatars-react@')
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v2
+
+      - name: Install dependencies
+        run: bun install --frozen-lockfile
+
+      - name: Build package
+        run: bun run build --filter @zenon-red/alien-avatars-react
+
+      - name: Publish to NPM
+        run: |
+          cd packages/react
+          npm publish --access public
+
+  publish-vue:
+    runs-on: ubuntu-latest
+    if: startsWith(github.ref, 'refs/tags/@zenon-red/alien-avatars-vue@')
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v2
+
+      - name: Install dependencies
+        run: bun install --frozen-lockfile
+
+      - name: Build package
+        run: bun run build --filter @zenon-red/alien-avatars-vue
+
+      - name: Publish to NPM
+        run: |
+          cd packages/vue
+          npm publish --access public

@@ -1,0 +1,44 @@
+{
+  "name": "@zenon-red/alien-avatars-vue",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "Deterministic SVG alien avatars for Vue",
+  "license": "MIT",
+  "homepage": "https://zenon.red",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zenon-red/alien-avatars.git",
+    "directory": "packages/vue"
+  },
+  "bugs": {
+    "url": "https://github.com/zenon-red/alien-avatars/issues"
+  },
+  "keywords": ["avatar", "svg", "vue", "vue3", "alien", "generator", "profile-picture", "deterministic", "zenon"],
+  "sideEffects": false,
+  "publishConfig": {
+    "access": "public"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "files": ["dist"],
+  "scripts": {
+    "build": "vite build",
+    "dev": "vite build --watch"
+  },
+  "peerDependencies": {
+    "vue": ">=3.3.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^6.0.4",
+    "typescript": "^5.9.3",
+    "vite": "^7.3.1",
+    "vite-plugin-dts": "^4.5.4",
+    "vue": "^3.5.28",
+    "vue-tsc": "^3.2.5"
+  }
+}

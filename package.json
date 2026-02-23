@@ -1,0 +1,35 @@
+{
+  "name": "alien-avatars",
+  "type": "module",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Deterministic SVG alien avatars for React and Vue.",
+  "workspaces": [
+    "packages/*",
+    "site"
+  ],
+  "scripts": {
+    "build": "bun run --filter '*' build",
+    "dev": "bun run --filter '*' dev",
+    "lint": "eslint .",
+    "lint:commit": "commitlint --edit",
+    "prepare": "husky"
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^7.4.3",
+    "@commitlint/cli": "^20.4.2",
+    "@commitlint/config-conventional": "^20.4.2",
+    "@eslint-react/eslint-plugin": "^2.13.0",
+    "eslint": "^10.0.1",
+    "eslint-plugin-react": "^7.37.5",
+    "eslint-plugin-react-hooks": "^7.0.1",
+    "eslint-plugin-react-refresh": "^0.5.0",
+    "husky": "^9.1.7",
+    "typescript": "^5.9.3"
+  }
+}

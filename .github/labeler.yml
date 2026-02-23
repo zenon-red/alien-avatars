@@ -1,0 +1,41 @@
+# Auto-label PRs based on file changes
+# Labels must exist in the repository (defined in settings.yml)
+
+doc:
+  - changed-files:
+      - any-glob-to-any-file:
+          - '**/*.md'
+          - 'docs/**'
+          - 'LICENSE*'
+
+code:
+  - changed-files:
+      - any-glob-to-any-file:
+          - '**/*.ts'
+          - '**/*.tsx'
+          - '**/*.js'
+          - '**/*.jsx'
+          - '**/*.mjs'
+          - '**/*.cjs'
+          - '**/*.vue'
+
+dep:
+  - changed-files:
+      - any-glob-to-any-file:
+          - package.json
+          - package-lock.json
+          - bun.lock
+          - yarn.lock
+          - pnpm-lock.yaml
+
+config:
+  - changed-files:
+      - any-glob-to-any-file:
+          - 'tsconfig*.json'
+          - '*.config.*'
+          - '.*rc'
+          - '.*rc.*'
+          - .editorconfig
+          - '.prettierrc*'
+          - '.eslintrc*'
+          - .github/dependabot.yml
