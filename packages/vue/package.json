@@ -1,7 +1,7 @@
 {
   "name": "@zenon-red/alien-avatars-vue",
   "type": "module",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Deterministic SVG alien avatars for Vue",
   "license": "MIT",
   "homepage": "https://zenon.red",
@@ -47,9 +47,9 @@
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^6.0.4",
-    "typescript": "^5.9.3",
-    "vite": "^7.3.1",
-    "vite-plugin-dts": "^4.5.4",
+    "typescript": "^6.0.3",
+    "vite": "^8.0.10",
+    "vite-plugin-dts": "^5.0.0",
     "vue": "^3.5.28",
     "vue-tsc": "^3.2.5"
   }

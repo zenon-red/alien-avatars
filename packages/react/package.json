@@ -1,7 +1,7 @@
 {
   "name": "@zenon-red/alien-avatars-react",
   "type": "module",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Deterministic SVG alien avatars for React.",
   "license": "MIT",
   "homepage": "https://zenon.red",
@@ -36,7 +36,7 @@
   "devDependencies": {
     "@types/react": "^19.2.14",
     "react": "^19.2.4",
-    "tsdown": "^0.20.3",
-    "typescript": "^5.9.3"
+    "tsdown": "^0.21.10",
+    "typescript": "^6.0.3"
   }
 }
